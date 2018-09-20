@@ -14,7 +14,6 @@
 @end
 
 @implementation LBArithmeticTests
-
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,16 +23,22 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
-
 - (void)test_combination {
-    int n = 10, m = 5;
-    NSArray *outArr = nil;
+    NSLog(@"---------------------分割线---------------------");
+    int n = 20, m = 5, measured = 0;
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
     for (int i = 0; i < n; i++) {
         [arr addObject:@(i)];
     }
-    [LBArithmetic lb_combinationWithArray:arr outCount:m outArray:&outArr];
-    NSLog(@"test_combination out array:%ld", outArr.count);
+    if (measured) {
+        [self measureBlock:^{
+            NSArray *res = [arr lb_combinationWithCount:m];
+            NSLog(@"[%d] %s %ld", __LINE__, __func__, res.count);
+        }];
+    }else {
+        NSArray *res = [arr lb_combinationWithCount:m];
+        NSLog(@"[%d] %s %@ %ld", __LINE__, __func__, res, res.count);
+    }
 }
 - (void)test_sku {
 //    NSArray *kinds1 = @[@{@"a":@[@11, @12]},

@@ -6,11 +6,13 @@
 //  Copyright © 2018年 李兵. All rights reserved.
 //
 
+#import "LBArithmeticCommon.h"
 #import <Foundation/Foundation.h>
 
 typedef BOOL(^LBArithmeticCondition)(NSDictionary *dic);
 
 @interface LBArithmetic : NSObject
+
 
 /**
  组合算法：C(n,m),n个元素中抽取m个进行组合
@@ -23,9 +25,11 @@ typedef BOOL(^LBArithmeticCondition)(NSDictionary *dic);
 
 
 /**
- SKU算法：一种商品有多种属性，每种属性又有不同的属性值，给定一个SKU数组，过滤出符合条件的属性值
+ SKU算法：
+    SKU:Stock Keeping Unit,库存量单位,可以理解为是一个确定的商品的相关属性,如一件衣服的 '红色|L码',就是一个SKU
+    一种商品有多种属性，每种属性又有不同的属性值，给定一个SKU数组和已选定的属性,求出缺失的属性
 
- @param kinds 商品属性数组，格式：[{@"a":[a1,a2,a3]},{@"b":[b1,b2,b3]}...]，or[[a1,a2,a3],[b1,b2,b3]...]
+ @param kinds 商品属性数组，格式：[{@"a":[a1,a2,a3]},{@"b":[b1,b2,b3]}...] or [[a1,a2,a3],[b1,b2,b3]...]
  @param selectedKinds 选中的属性组合，格式：[a1,b1...]
  @param skus 单品数组，格式：[{"sku1":{dic}},{"sku2":{dic}}...]
  @param ignoreErrorSku 是否忽略异常的sku数据，YES->有异常的忽略掉；NO->发现异常就终止, default is YES

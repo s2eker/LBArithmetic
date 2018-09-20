@@ -14,6 +14,7 @@
 		D66EEA23212715EF000B2306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66EEA21212715EF000B2306 /* LaunchScreen.storyboard */; };
 		D66EEA26212715EF000B2306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D66EEA25212715EF000B2306 /* main.m */; };
 		D66EEA2E2127162D000B2306 /* LBArithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = D66EEA2D2127162D000B2306 /* LBArithmetic.m */; };
+		D68F759D213798CD0029E34E /* LBArithmeticCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D68F759C213798CD0029E34E /* LBArithmeticCommon.m */; };
 		D6A16BA32127CBBD00676EC7 /* LBArithmeticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A16BA22127CBBD00676EC7 /* LBArithmeticTests.m */; };
 		D6CF89CF2128E1650050A254 /* LBSKUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CF89CE2128E1650050A254 /* LBSKUViewController.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,8 @@
 		D66EEA25212715EF000B2306 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D66EEA2C2127162D000B2306 /* LBArithmetic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBArithmetic.h; sourceTree = "<group>"; };
 		D66EEA2D2127162D000B2306 /* LBArithmetic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBArithmetic.m; sourceTree = "<group>"; };
+		D68F759B213798CD0029E34E /* LBArithmeticCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBArithmeticCommon.h; sourceTree = "<group>"; };
+		D68F759C213798CD0029E34E /* LBArithmeticCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBArithmeticCommon.m; sourceTree = "<group>"; };
 		D6A16BA02127CBBD00676EC7 /* LBArithmeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBArithmeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A16BA22127CBBD00676EC7 /* LBArithmeticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBArithmeticTests.m; sourceTree = "<group>"; };
 		D6A16BA42127CBBD00676EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,10 +90,9 @@
 		D66EEA15212715EB000B2306 /* LBArithmetic */ = {
 			isa = PBXGroup;
 			children = (
+				D6C795D42129D0090016C193 /* LBArithmetic */,
 				D66EEA16212715EB000B2306 /* AppDelegate.h */,
 				D66EEA17212715EB000B2306 /* AppDelegate.m */,
-				D66EEA2C2127162D000B2306 /* LBArithmetic.h */,
-				D66EEA2D2127162D000B2306 /* LBArithmetic.m */,
 				D66EEA19212715EB000B2306 /* ViewController.h */,
 				D66EEA1A212715EB000B2306 /* ViewController.m */,
 				D6CF89CD2128E1650050A254 /* LBSKUViewController.h */,
@@ -111,6 +113,17 @@
 				D6A16BA42127CBBD00676EC7 /* Info.plist */,
 			);
 			path = LBArithmeticTests;
+			sourceTree = "<group>";
+		};
+		D6C795D42129D0090016C193 /* LBArithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				D66EEA2C2127162D000B2306 /* LBArithmetic.h */,
+				D66EEA2D2127162D000B2306 /* LBArithmetic.m */,
+				D68F759B213798CD0029E34E /* LBArithmeticCommon.h */,
+				D68F759C213798CD0029E34E /* LBArithmeticCommon.m */,
+			);
+			path = LBArithmetic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +230,7 @@
 				D6CF89CF2128E1650050A254 /* LBSKUViewController.m in Sources */,
 				D66EEA2E2127162D000B2306 /* LBArithmetic.m in Sources */,
 				D66EEA26212715EF000B2306 /* main.m in Sources */,
+				D68F759D213798CD0029E34E /* LBArithmeticCommon.m in Sources */,
 				D66EEA18212715EB000B2306 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
